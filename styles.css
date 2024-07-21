@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+:root {
+  --primary-grey: #a1a1a1;
+  --blk: hsl(0, 0%, 0%);
+  --wte: hsl(0, 0%, 100%);
+  --dark-grey: hsl(0%, 0%, 27%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  font-family: "League Spartan", sans-serif;
+}
+
+/* ----------------------------------  Header styling Start  ----------------------------------*/
+header {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 3rem;
+  position: absolute;
+  padding: 1rem 4rem;
+  z-index: 96;
+}
+header .nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.ham-open {
+  position: absolute;
+  color: white;
+  visibility: hidden;
+  transition: all 0.5;
+}
+.ham-close {
+  position: absolute;
+  color: black;
+  visibility: hidden;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--wte);
+  font-weight: 600;
+  position: relative;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 20%;
+  width: 25px;
+  transition: all 0.3s ease;
+  height: 2px;
+  background-color: var(--wte);
+  opacity: 0;
+}
+
+li a:hover::after {
+  opacity: 1;
+}
+
+/* ----------------------------------  Header styling END  ----------------------------------*/
+
+/* ----------------------------------  Main styling Start  ----------------------------------*/
+main {
+  width: 100%;
+}
+
+/* ----------------------------------  Section 2 styling Start  ----------------------------------*/
+.slider-container {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  transition: all 0.8s;
+}
+.slide .img-cont {
+  width: 58%;
+}
+.slide img {
+  max-width: 100%;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.slide .content {
+  width: 42%;
+  padding: 2.5rem;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--primary-grey);
+  margin-bottom: 2rem;
+}
+
+.shop-now-btn {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-now-btn:hover .sib,
+.shop-now-btn:hover {
+  color: var(--primary-grey);
+  fill: var(--primary-grey);
+}
+
+.btn-container {
+  width: 110px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 33.3%;
+  text-align: center;
+  z-index: 97;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-color: var(--blk);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+  background-color: #444444;
+}
+/* ----------------------------------  Section 2 styling Start  ----------------------------------*/
+.section-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.img1,
+.img2 {
+  max-width: 100%;
+  width: 30%;
+  height: 40vh;
+}
+
+.content-2 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content-2 h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 1rem;
+}
+
+.content-2 p {
+  font-size: 0.8rem;
+  color: var(--primary-grey);
+  line-height: 1rem;
+}
+
+/* ----------------------------------  Section 2 styling END  ----------------------------------*/
+/* ----------------------------------  Main styling END  ----------------------------------*/
+
+/* ----------------------------------  Footer styling Start  ----------------------------------*/
+/* Attribution Styling */
+.attribution {
+  width: 100%;
+  font-size: 16px;
+  position: relative;
+  /* text-align: center; */
+  background-color: rgba(0, 0, 0, 0.927);
+  color: #42e88d;
+  overflow: hidden;
+  padding: 2rem;
+}
+.attribution p {
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll-left 12s linear infinite;
+}
+.attribution a {
+  color: white;
+  font-size: 1.1rem;
+}
+@keyframes scroll-left {
+  from {
+    left: 100%;
+    width: 100%;
+  }
+  to {
+    left: -100%;
+    width: -20%;
+  }
+}
+
+/* ----------------------------------  Footer styling END  ----------------------------------*/
+
+/* ---------- Media query Start */
+/* ----------------------------------  Media  Query Start  ----------------------------------*/
+
+@media only screen and (max-width: 778px) {
+  .slider-container {
+    height: 100vh;
+  }
+  .slide {
+    flex-direction: column;
+  }
+
+  .slide .img-cont {
+    width: 100%;
+    /* height: 50vh; */
+  }
+  .slide .content {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .btn-container {
+    bottom: 40%;
+    right: 0%;
+  }
+
+  .section-2 {
+    flex-direction: column;
+  }
+
+  .img1,
+  .img2,
+  .content-2 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .logo {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(50%, 50%);
+  }
+  header {
+    padding: 0;
+  }
+  header .nav-bar {
+    position: fixed;
+    right: 0;
+    display: none;
+    width: 100%;
+    background-color: #fff;
+
+    justify-content: flex-end;
+    height: 100px;
+  }
+  ul {
+    justify-content: flex-end;
+    margin-right: 2rem;
+    margin-top: 2.8rem;
+  }
+  li a {
+    color: black;
+  }
+  .ham-open,
+  .ham-close {
+    top: 40%;
+    left: 8%;
+    z-index: 99;
+  }
+
+  .ham-open {
+    visibility: visible;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .shop-now-btn {
+    font-size: 0.8rem;
+  }
+
+  .img1,
+  .img2 {
+    height: 30vh;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  ul {
+    margin-right: 1rem;
+  }
+  .slider-container {
+    overflow-y: visible;
+  }
+}
+/* ----------------------------------  Media  Query END  ----------------------------------*/

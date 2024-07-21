@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-room-homepage-using-html-css-js-g99EFC40Se](https://www.frontendmentor.io/solutions/responsive-room-homepage-using-html-css-js-g99EFC40Se)
+- Live Site URL: [https://roomhomepagefrontent.netlify.app/](https://roomhomepagefrontent.netlify.app/)
 
 ## My process
 

@@ -6,7 +6,7 @@ const slides = document.querySelectorAll(".slide");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 
-//-------------------------  Checlong width to change Img Src  --------------------------
+//-------------------------  Checking width to change Img Src  --------------------------
 let width = window.innerWidth > 0 ? window.innerWidth : screen.width;
 if (width <= 486) {
   document.querySelectorAll(".img-cont img").forEach((img, i) => {
@@ -14,7 +14,7 @@ if (width <= 486) {
     img.setAttribute("src", `/images/mobile-image-hero-${i + 1}.jpg`);
   });
 }
-//-------------------------  Checlong width to change Img Src  --------------------------
+//-------------------------  Checking width to change Img Src  --------------------------
 
 //-------------------------  Open And Close Menu  --------------------------
 menuOpen.addEventListener("click", function () {
